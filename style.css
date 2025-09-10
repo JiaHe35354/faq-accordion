@@ -21,6 +21,7 @@ html {
 body {
   font-family: "Work Sans", sans-serif;
   font-size: 1.6rem;
+  font-weight: 400;
   color: var(--purple-dark);
   background-color: var(--purple-light);
   line-height: 1.2;
@@ -89,9 +90,11 @@ picture img {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
+
   width: 100%;
   border: none;
   background: none;
+  font-family: inherit;
   font-size: 1.8rem;
   font-weight: 600;
   text-align: left;
