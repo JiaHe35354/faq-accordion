@@ -1,0 +1,182 @@
+:root {
+  --white: hsl(0, 100%, 100%);
+  --purple-light: hsl(275, 100%, 97%);
+  --purple-medium: hsl(293, 16%, 49%);
+  --purple-dark: hsl(292, 42%, 14%);
+  --color-active: hsl(281, 83%, 54%);
+}
+
+/* GENERAL SETTING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.6rem;
+  color: var(--purple-dark);
+  background-color: var(--purple-light);
+  line-height: 1.2;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 60rem;
+  width: 85%;
+  background-color: var(--white);
+  padding: 4rem;
+  border-radius: 15px;
+  box-shadow: 2rem 4rem 4rem rgba(140, 105, 145, 0.15);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.heading-primary {
+  font-size: 5.6rem;
+  font-weight: 700;
+}
+
+/* FAQS */
+.accordion:not(:last-child) {
+  border-bottom: 1px solid var(--purple-light);
+  margin-bottom: 2.4rem;
+  padding-bottom: 2.4rem;
+}
+
+.accordion:last-child .heading-secondary {
+  margin-bottom: 0;
+}
+
+.heading-secondary {
+  width: 100%;
+}
+
+.heading-secondary button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.heading-secondary button[aria-expanded="false"] img {
+  content: url("assets/images/icon-plus.svg");
+}
+
+.heading-secondary button[aria-expanded="true"] img {
+  content: url("assets/images/icon-minus.svg");
+}
+
+.heading-secondary button:hover,
+.heading-secondary button:focus {
+  color: var(--color-active);
+  outline: none;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.accordion-panel.show {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.accordion-panel p {
+  color: var(--purple-medium);
+  margin-top: 2.4rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 4.5rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--purple-dark);
+  transition: all 0.3s ease;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  color: var(--color-active);
+}
+
+@media screen and (max-width: 36.875em) {
+  .heading-primary {
+    font-size: 4.8rem;
+  }
+}
+
+@media screen and (max-width: 31.25em) {
+  body {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  .header {
+    margin-bottom: 2.4rem;
+  }
+
+  .header img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .heading-primary {
+    font-size: 3.2rem;
+  }
+
+  .container {
+    padding: 2.4rem;
+  }
+
+  .heading-secondary button {
+    font-size: 1.6rem;
+  }
+}
