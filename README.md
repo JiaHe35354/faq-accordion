@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My solution]()
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/faq-accordion-solution-pRPgRLHXN-)
 - Live Site URL: [Live site URL](https://faq-accordion-jiah.netlify.app/)
 
 ## My process
